@@ -22,7 +22,7 @@
 Please open page 14 [of this document](
 http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)<sup>1</sup>
 and look at the figure with the memory layout.
-![Typical lower memory layout after boot.](D:\github\OS_tutorial\03\Typical lower memory layout after boot.png)
+![Typical lower memory layout after boot.]([D:\github\OS_tutorial\03\Typical lower memory layout after boot.png](https://github.com/Citem7/os-tutorial/blob/master/03-bootsector-memory/Typical%20lower%20memory%20layout%20after%20boot.png))
 The only goal of this lesson is to learn where the boot sector is stored
 
 I could just bluntly tell you that the BIOS places it at `0x7C00` and
