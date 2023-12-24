@@ -1,11 +1,28 @@
 *Concepts you may want to Google beforehand: memory offsets, pointers*
-
+>**内存偏移（Memory offsets）**
+>内存偏移（Memory offsets）指的是内存地址之间的距离或位移。在计算机系统中，内存被组织成线性的地址空间，每个字节都有唯一的地址。内存偏移用于访问地址空间中的特定位置。
+>
+>在低级编程或系统编程中，内存偏移经常用于访问数组或结构体中的单个元素。通过将偏移量添加到基础内存地址，可以访问数据结构中的特定元素或字段。这通常使用指针算术来完成，其中偏移量乘以数据类型的大小来计算内存地址。
+>
+>例如，考虑C语言中的整数数组：
+>
+>```C
+>int numbers[5] = {10, 20, 30, 40, 50};
+>```
+>要使用内存偏移访问数组中的第三个元素（30），可以使用指针算术：
+>```C
+>int* ptr = &numbers[0];  // 获取数组的基础地址
+>int offset = 2;  // 第三个元素的偏移量
+>int* target = ptr + offset;  // 计算内存地址
+>int value = *target;  // 访问内存地址处的值
+>printf("%d\n", value);  // 输出：30
+>```
 **Goal: Learn how the computer memory is organized**
 
 Please open page 14 [of this document](
 http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)<sup>1</sup>
 and look at the figure with the memory layout.
-
+![Typical lower memory layout after boot.](D:\github\OS_tutorial\03\Typical lower memory layout after boot.png)
 The only goal of this lesson is to learn where the boot sector is stored
 
 I could just bluntly tell you that the BIOS places it at `0x7C00` and
