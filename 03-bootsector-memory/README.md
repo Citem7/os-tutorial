@@ -116,7 +116,6 @@ us define a "global offset" for every memory location, with the `org` command:
 >
 >以下是一个修正后的示例，展示了在引导扇区中使用绝对地址0x7c00的情况：
 >
-
 >```nasm
 >start:
 >    mov ax, 0x1234    ; 将0x1234存储到寄存器ax中
@@ -136,6 +135,7 @@ us define a "global offset" for every memory location, with the `org` command:
 Go ahead and **open `boot_sect_memory_org.asm`** and you will see the canonical
 way to print data with the boot sector, which is now attempt 2. Compile the code
 and run it, and you will see how the `org` command affects each previous solution.
+>请打开boot_sect_memory_org.asm文件，你将看到打印数据的引导扇区的典型方式，这是第二次尝试。编译代码并运行它，你将看到org指令如何影响之前的每个解决方案。
 
 Read the comments for a full explanation of the changes with and without `org`
 
