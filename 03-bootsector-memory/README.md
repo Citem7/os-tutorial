@@ -126,7 +126,7 @@ us define a "global offset" for every memory location, with the `org` command:
 >
 >times 510-($-$$) db 0    ; 填充引导扇区的剩余空间
 >dw 0xAA55    ; 引导扇区的结束标志
-```
+>```
 >
 >在这个修正后的例子中，我们没有使用org指令，而是直接在代码中使用绝对地址0x7c00。最后的两行代码用于填充引导扇区的剩余空间，并添加引导扇区的结束标志0xAA55。
 >
